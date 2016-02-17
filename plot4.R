@@ -57,11 +57,11 @@ plot(selectedData$Time, as.numeric(selectedData$Voltage), xlab = "datetime", yla
 # We 1st create the initial plot.
 plot(selectedData$Time, selectedData$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "l", col = "#000000")
 # Subsequent variables are added to the plot using lines().
-lines(selectedData$Time, selectedData$Sub_metering_2, type = "l", col = "#ff6000")
+lines(selectedData$Time, selectedData$Sub_metering_2, type = "l", col = "#ff0000")
 lines(selectedData$Time, selectedData$Sub_metering_3, type = "l", col = "#0099ff")
 
 # Adding the legend:
-legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd=2, col=c("#000000", "#ff6000", "#0099ff"))
+legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd=2, col=c("#000000", "#ff0000", "#0099ff"))
 
 # BOTTOM RIGHT PLOT.
 # IMPORTANT => variable Global_reactive_power is factor type, so it needs to be converted to

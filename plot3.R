@@ -20,7 +20,6 @@ head(fileData)
 # Check the variable type for each column => ATTENTION!! columns Date and Time are factor.
 sapply(fileData, class)
 
-
 # For this plot we will need variable Time, also factor type, to be converted to real time.
 # For this plot, we need to combine Date and Time columns to produce a day of the week.
 fileData$Time <- strptime(paste(fileData$Date, fileData$Time), "%d/%m/%Y %H:%M:%S")
@@ -46,11 +45,11 @@ png("plot3.png", width = 480, height = 480)
 # We 1st create the initial plot.
 plot(selectedData$Time, selectedData$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "l", col = "#000000")
 # Subsequent variables are added to the plot using lines().
-lines(selectedData$Time, selectedData$Sub_metering_2, type = "l", col = "#ff6000")
+lines(selectedData$Time, selectedData$Sub_metering_2, type = "l", col = "#ff0000")
 lines(selectedData$Time, selectedData$Sub_metering_3, type = "l", col = "#0099ff")
 
 # Adding the legend:
-legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd=2, col=c("#000000", "#ff6000", "#0099ff"))
+legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd=2, col=c("#000000", "#ff0000", "#0099ff"))
 
 dev.off()
 

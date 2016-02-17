@@ -34,10 +34,9 @@ par(mar=c(5.1,6.1,4.1,2.1))
 
 # IMPORTANT => variable Global_active_power is factor type, so it needs to be converted to
 # numeric type in order to produce as histogram.
-hist(as.numeric(selectedData$Global_active_power), main = "Global Active Power", xlab = "Global Active Power (kilowatts)", ylab = "Frequency", col = "#ff6000")
+hist(as.numeric(selectedData$Global_active_power), main = "Global Active Power", xlab = "Global Active Power (kilowatts)", ylab = "Frequency", col = "#ff0000")
 
 # Saving as PNG. It will be saved in default working directory.
 dev.copy(png, "plot1.png", width = 480, height = 480)
 dev.off()
-
 
